@@ -1,4 +1,4 @@
-import { intervalToDuration } from "./node_modules/date-fns/intervalToDuration.mjs";
+import { intervalToDuration } from "https://cdn.jsdelivr.net/npm/date-fns@2.29.3/esm/index.js";
 
 const days = document.querySelector(".days");
 const hours = document.querySelector(".hours");
@@ -21,29 +21,25 @@ setInterval(() => {
 
   if (difference.days) {
     days.textContent = difference.days;
-    days.textContent = days.textContent.padStart(2, "0")
+    days.textContent = days.textContent.padStart(2, "0");
   } else {
     days.textContent = "00";
   }
   if (difference.hours) {
-    hours.textContent = difference.hours
-    hours.textContent = hours.textContent.padStart(2, "0")
-
+    hours.textContent = difference.hours;
+    hours.textContent = hours.textContent.padStart(2, "0");
   } else {
     hours.textContent = "00";
   }
   if (difference.minutes) {
     minutes.textContent = difference.minutes;
-    minutes.textContent = minutes.textContent.padStart(2, "0")
-
-    
+    minutes.textContent = minutes.textContent.padStart(2, "0");
   } else {
     minutes.textContent = "00";
   }
   if (difference.seconds) {
     seconds.textContent = difference.seconds;
     seconds.textContent = seconds.textContent.padStart(2, "0");
-
   } else {
     seconds.textContent = "00";
   }
